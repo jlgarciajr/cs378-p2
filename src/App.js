@@ -84,8 +84,13 @@ function App() {
     <div>
       <h1>Menu</h1>
       <div className="menu">
-        {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
-        <MenuItem title={menuItems[0].title} /> {/* Example for how to use a component */}
+        {menuItems.map(item => (
+        <MenuItem
+          title={item.title}
+          description={item.description}
+          price={item.price}
+        /> 
+      ))}
       </div>
     </div>
   );
